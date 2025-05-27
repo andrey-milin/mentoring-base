@@ -1,46 +1,14 @@
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Inter, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    margin: 0;
-    padding: 0;
-    background-color: #F6F6F6;
-}
-
-h2,
-h3,
-h4 {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    cursor: pointer;
-}
-
 .clear-list {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .container {
     max-width: 1350px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin: 0px auto;
+    padding: 0px 15px;
 }
-
-/* верхний блок хедера */
 
 .main-nav {
     background-color: #4B565E;
@@ -51,10 +19,8 @@ a {
     align-items: center;
 }
 
-/*верхний хедер __ левая часть логотип и навигация */
-
 .main-nav__logo {
-    margin: 20px 40px 20px 0;
+    margin: 20px 40px 20px 0px;
 }
 
 .main-nav__list {
@@ -66,7 +32,7 @@ a {
 .main-nav__item a {
     display: block;
     margin-right: 24px;
-    padding: 36px 0;
+    padding: 36px 0px;
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
@@ -79,9 +45,6 @@ a {
     text-decoration: underline;
     color: #7fbeec;
 }
-
-
-/* верхний хедер __ правая часть навигации телефон карзина */
 
 .nav-content {
     margin-left: auto;
@@ -111,8 +74,7 @@ a {
     margin-left: 10px;
 }
 
-/* карзина
- */
+
 .nav-content__cart {
     display: flex;
     justify-content: center;
@@ -139,13 +101,10 @@ a {
     color: #F9FAFB;
 }
 
-/* нижний блок хедера */
 
 .header-sub {
     background-color: #F0BA4E;
 }
-
-/* нижний хедер __ левая часть меню */
 
 .header-sub__container {
     display: flex;
@@ -156,13 +115,13 @@ a {
 .header-sub__btn-menu {
     border: none;
     background-color: transparent;
-    padding: 0;
+    padding: 0px;
     cursor: pointer;
 }
 
 .header-sub__btn-menu img {
     display: block;
-    margin: 12px 10px 12px 0;
+    margin: 12px 10px 12px 0px;
 
 }
 
@@ -190,9 +149,6 @@ a {
     text-decoration: underline;
     color: #FFFFFF99;
 }
-
-
-/* нижний хедер __ правая чать геолокация */
 
 .header-sub__utils {
     width: 100%;
@@ -245,10 +201,10 @@ a {
 .header-sub__search-btn {
     border: none;
     background-color: transparent;
-    padding: 0;
+    padding: 0px;
     display: block;
     position: absolute;
-    right: 0;
+    right: 0px;
     bottom: 4px;
     cursor: pointer;
 }
@@ -267,8 +223,8 @@ a {
 
 .header-sub__сities {
     appearance: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     border: none;
     outline: none;
     background: transparent;
@@ -311,8 +267,6 @@ a {
     color: #F0BA4E;
 }
 
-/* блок с сервис услугами */
-
 .service {
     margin-bottom: 63px;
     width: 100%;
@@ -340,21 +294,17 @@ a {
 
 .service__item p {
     display: block;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .service__item b {
     color: #3C3C3B;
 }
 
-/* блок с котигориями товаров */
-
 .categories {
     margin-bottom: 56px;
 }
-
-/* пагинация для категорий товаров  */
 
 .categories__pagination {
     display: flex;
@@ -371,17 +321,14 @@ a {
     font-size: 16px;
     line-height: 19px;
     color: #A1A0A0;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     cursor: pointer;
 }
 
 .pagination--active button {
-    /* активная кнопка */
     color: #F0BA4E;
 }
-
-/* категории товаров */
 
 .categories__list {
     display: grid;
@@ -404,7 +351,6 @@ a {
     color: #3C3C3B;
 }
 
-/* кнопка в виде стрелик в желтом кругу */
 .categories__card-arrow {
     width: 100%;
     max-width: 178px;
@@ -427,16 +373,15 @@ a {
     border-radius: 80px;
     width: 40px;
     height: 40px;
-    padding: 0;
+    padding: 0px;
     cursor: pointer;
 }
 
 .pistol {
-    /* карточка с краскопультом */
     width: 100%;
     grid-row-start: 1;
     grid-row-end: 3;
-    background-image: url(/assets/pistol.png);
+    background-image: url("/assets/pistol.png");
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: bottom;
@@ -450,7 +395,7 @@ a {
 }
 
 .spray {
-    background-image: url(/assets/Spray.png);
+    background-image: url("/assets/Spray.png");
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     background-position-x: left;
@@ -466,7 +411,7 @@ a {
 }
 
 .paint {
-    background-image: url(/assets/paint.png);
+    background-image: url("/assets/paint.png");
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     background-position-x: right;
@@ -474,7 +419,7 @@ a {
 }
 
 .glue {
-    background-image: url(/assets/glue.png);
+    background-image: url("/assets/glue.png");
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     background-position-x: right;
@@ -482,7 +427,7 @@ a {
 }
 
 .rosette {
-    background-image: url(/assets/rosette.png);
+    background-image: url("/assets/rosette.png");
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     background-position-x: left;
@@ -493,22 +438,18 @@ a {
     margin-left: auto;
 }
 
-/* слайд популярные товары */
-
 .popular-products {
     max-width: 1398px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0px auto;
     margin-bottom: 56px;
     position: relative;
 }
 
-/* стрелки для промотки карточек */
-
 .products-control {
     max-width: 1398px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -520,7 +461,7 @@ a {
     height: 60px;
     border: none;
     border-radius: 36px;
-    padding: 0;
+    padding: 0px;
     background-color: #FFFFFF;
     cursor: pointer;
 }
@@ -568,8 +509,8 @@ a {
 
 .card__favorite-btn {
     display: block;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     margin-left: auto;
     border: none;
     background-color: inherit;
@@ -581,11 +522,10 @@ a {
     display: block;
     position: relative;
     z-index: 0;
-    /* для модификатора "%" и "новинка" */
 }
 
 .card__title {
-    padding: 8px 0;
+    padding: 8px 0px;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -593,8 +533,8 @@ a {
 }
 
 .card__article {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     padding-bottom: 20px;
     display: block;
     font-weight: 500;
@@ -609,8 +549,8 @@ a {
 }
 
 .card__price-name {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -636,8 +576,6 @@ a {
     line-height: 24px;
     color: #3C3C3B;
 }
-
-/* кнопка и счетчик для корзины */
 
 .card__cart {
     display: flex;
@@ -666,8 +604,8 @@ a {
 .card__cart-qty__btn-minus {
     border: none;
     background-color: inherit;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -678,8 +616,8 @@ a {
 .card__cart-qty__btn-plus {
     border: none;
     background-color: inherit;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -697,7 +635,7 @@ a {
 .card__cart-btn {
     max-width: 135px;
     width: 100%;
-    padding: 0;
+    padding: 0px;
     border: 1px solid #F0BA4E;
     border-radius: 54px;
     background-color: inherit;
@@ -708,17 +646,15 @@ a {
     color: #3C3C3B;
 }
 
-/* модификаторы "%" и "новинка" для карточек  */
-
 .icon--precent {
-    background-image: url(/assets/percent.svg);
+    background-image: url("/assets/percent.svg");
     background-repeat: no-repeat;
     background-position-x: 24px;
     background-position-y: 24px;
 }
 
 .icon--new {
-    background-image: url(/assets/icon-new.svg);
+    background-image: url("/assets/icon-new.svg");
     background-repeat: no-repeat;
     background-position-x: 24px;
     background-position-y: 24px;
@@ -731,19 +667,17 @@ a {
     height: 90px;
     top: 24px;
     left: 24px;
-    background-image: url(/assets/new_percent.svg);
+    background-image: url("/assets/new_percent.svg");
     background-size: cover;
     z-index: 1
 }
-
-/* секция баннер */
 
 .subbanner {
     margin-bottom: 56px;
     padding: 28px;
     background-color: #F6F6F6;
     background: rgba(0, 0, 0, 0.02);
-    background-image: url(/assets/sub-banner.png);
+    background-image: url("/assets/sub-banner.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-position-x: right;
@@ -756,7 +690,7 @@ a {
     font-size: 28px;
     line-height: 34px;
     color: #3C3C3B;
-    margin: 0;
+    margin: 0px;
     padding-bottom: 16px;
 }
 
@@ -765,7 +699,7 @@ a {
     font-size: 20px;
     line-height: 24px;
     color: #A1A0A0;
-    margin: 0;
+    margin: 0px;
     padding-bottom: 99px;
 }
 
@@ -783,16 +717,13 @@ a {
     color: #7fbeec;
 }
 
-/* блок новинки */
-
 .new-products {
     max-width: 1398px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0px auto;
     margin-bottom: 56px;
     position: relative;
 }
-
 
 .new-products__list {
     display: flex;
@@ -800,8 +731,6 @@ a {
     gap: 28px;
     margin-bottom: 48px;
 }
-
-/* футер */
 
 .footer {
     margin-top: auto;
@@ -902,8 +831,8 @@ a {
     font-size: 14px;
     line-height: 24px;
     color: #FFFFFF99;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     padding-bottom: 32px;
 }
 
@@ -920,7 +849,7 @@ a {
     border: 1px solid #F0BA4E;
     border-radius: 30px;
     background-color: inherit;
-    background-image: url(/img/Icon-mail_input.svg);
+    background-image: url("/img/Icon-mail_input.svg");
     background-repeat: no-repeat;
     background-position-x: 4.5%;
     background-position-y: 44%;
@@ -1285,7 +1214,7 @@ a {
     }
 
     .service__list {
-        gap: 16px 0;
+        gap: 16px 0px;
     }
 
     .categories__card-title {
@@ -1338,8 +1267,8 @@ a {
     .main-wrapper {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .header-sub__location {
@@ -1440,7 +1369,7 @@ a {
     }
 
     .header-sub__utils {
-        margin: 0 auto;
+        margin: 0px auto;
     }
 
     .header-sub__input-box {
@@ -1556,11 +1485,11 @@ a {
     }
 
     .popular-products__wrapper {
-        padding: 0;
+        padding: 0px;
     }
 
     .new-products__wrapper {
-        padding: 0;
+        padding: 0px;
     }
 
     .products__title {
@@ -1581,7 +1510,7 @@ a {
 
     .card__title {
         font-size: 14px;
-        padding: 4px 0;
+        padding: 4px 0px;
     }
 
     .card__price-name {
