@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="main-nav">
       <div class="container main-nav__container">
-        <a href="#" class="main-nav__burger"> <!-- img для мобильной версии -->
+        <a href="#" class="main-nav__burger">
           <img src="/assets/burger-mob.svg" alt="кнопка навигации">
         </a>
         <a href="#" class="main-nav__logo">
@@ -10,13 +10,16 @@
         </a>
         <ul class="main-nav__list clear-list">
           <li class="main-nav__item">
-            <a href="#">Главная</a>
+            <a href="#" *ngIf="isShowCatalog">{{headertItem1}}</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">О компании</a>
+            <a href="#">{{aboutCompany}}</a>
           </li>
           <li class="main-nav__item">
             <a href="#">Каталог</a>
+          </li>
+          <li class="main-nav__item">
+            <button class="btn" (click)="changeMenuText()" >text/up/low</button>
           </li>
         </ul>
         <ul class="main-nav__content nav-content clear-list">
@@ -46,9 +49,9 @@
         </button>
         <ul class="header-sub__list clear-list">
           <li class="header-sub__item">
-            <a href="#" class="header-sub__item-link">Каталог</a>
+            <a href="#" class="header-sub__item-link ngfor-link" *ngFor="let item of menuItems">{{item}}</a>
           </li>
-          <li class="header-sub__item">
+          <!-- <li class="header-sub__item">
             <a href="#" class="header-sub__item-link">Стройматериалы</a>
           </li>
           <li class="header-sub__item">
@@ -59,7 +62,7 @@
           </li>
           <li class="header-sub__item">
             <a href="#" class="header-sub__item-link">Интерьер и одежда</a>
-          </li>
+          </li> -->
         </ul>
         <div class="header-sub__utils">
           <div class="header-sub__input-box">
@@ -81,8 +84,9 @@
     </div>
   </header>
   <main>
+    <button class="banner__btn btn" (click)="isShowBanner = !isShowBanner">вкл./выкл. БАННЕР</button>
     <div class="banner container">
-      <img src="/assets/baner.png" alt="банер" class="banner__img">
+      <img src="/assets/baner.png" alt="банер" class="banner__img" *ngIf="isShowBanner">
       <img src="/assets/mobail_banner.png" alt="банер" class="banner__mobail">
       <h1 class="title">Инструмент для вашего бизнеса</h1>
     </div>
@@ -104,7 +108,9 @@
     </section>
     <section class="categories container">
       <ul class="categories__pagination clear-list">
-        <li class="categories__pagination-item pagination--active">
+        <li class="categories__pagination-item pagination--active ngfor-btn">
+          <button type="button" *ngFor="let item of newPages">{{item}}</button>
+        <!-- <li class="categories__pagination-item pagination--active" >
           <button type="button">1</button>
         </li>
         <li class="categories__pagination-item">
@@ -118,7 +124,7 @@
         </li>
         <li class="categories__pagination-item">
           <button type="button">5</button>
-        </li>
+        </li> -->
       </ul>
       <ul class="categories__list clear-list">
         <li class="categories__card pistol">

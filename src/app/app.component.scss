@@ -145,6 +145,10 @@
     transition: all 0.3s ease;
 }
 
+.ngfor-link {
+    margin-left: 15px;
+}
+
 .header-sub__item-link:hover {
     text-decoration: underline;
     color: #FFFFFF99;
@@ -247,12 +251,27 @@
 
 }
 
+
 .banner__img {
     display: block;
     width: 100vw;
     left: 50%;
     margin-left: -50vw;
     position: relative;
+}
+
+.btn {
+    display: block;
+    background-color: #4B565E;
+    color: #F6F6F6;
+    border: 1px solid #F0BA4E;
+    height: 58px;
+    width: 146px;
+    border-radius: 36px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F9FAFB;
 }
 
 .title {
@@ -328,6 +347,11 @@
 
 .pagination--active button {
     color: #F0BA4E;
+}
+
+.ngfor-btn {
+    display: flex;
+    gap: 16px;
 }
 
 .categories__list {
@@ -849,7 +873,7 @@
     border: 1px solid #F0BA4E;
     border-radius: 30px;
     background-color: inherit;
-    background-image: url("/img/Icon-mail_input.svg");
+    background-image: url("/assets/Icon-mail_input.svg");
     background-repeat: no-repeat;
     background-position-x: 4.5%;
     background-position-y: 44%;
