@@ -1,0 +1,12 @@
+
+<ul class="user-list clear-list container">
+    <li class="user-list__item" *ngFor="let item of users">
+        <p>{{(item).name}}</p>
+        <p>{{(item).address.city}}</p>
+        <p class="user-list__company-name">{{(item).company.name}}</p>
+        <a href="#" type="mail">{{(item).email}}</a>
+        <a href="#">{{(item).website}}</a>
+        <p>{{(item).phone}}</p>
+        <button class="user-list__btn" (click)="deleteUser(item.id)">УДАЛИТЬ ЮЗЕРА</button>
+    </li>
+</ul>

@@ -1,20 +1,13 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
-
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 const titleAboutCompany = (title: string) => {
   return title
 }
 const resultAboutCompany = titleAboutCompany('О компании');
 
-const newPages = [5, 4, 3, 2, 1]
-newPages.forEach(
-  (number) => {
-    console.log(number);
-  }
-)
 const menuItems = ['Каталог', 'Стройматериалы', 'Инструменты', 'Электрика', 'Интерьер и одежда',]
 
 const upperCaseMenuItems = menuItems.map(
@@ -25,12 +18,10 @@ const upperCaseMenuItems = menuItems.map(
 
 console.log(upperCaseMenuItems)
 
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, NgFor],
+  imports: [RouterLink, RouterOutlet, NgIf, NgFor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -40,12 +31,8 @@ export class AppComponent {
   readonly aboutCompany = resultAboutCompany;
   readonly headertItem3 = 'Каталог';
   readonly isShowCatalog = true;
-  readonly newPages = newPages;
   menuItems = upperCaseMenuItems;
-  isShowBanner = true;
   isUpperCase = true;
-
-
 
   changeMenuText() {
     this.menuItems = upperCaseMenuItems.map(
@@ -53,9 +40,6 @@ export class AppComponent {
     )
     this.isUpperCase = !this.isUpperCase;
   }
-
-
-
-
 }
+
 
