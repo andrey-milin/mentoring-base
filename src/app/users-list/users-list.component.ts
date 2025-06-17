@@ -1,6 +1,6 @@
-import { NgFor, NgIf } from "@angular/common";
+import { NgFor } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
-import { Component, inject, Injectable } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { User } from "./user.interface";
 
 @Component({
@@ -9,7 +9,6 @@ import { User } from "./user.interface";
     standalone: true,
     templateUrl: './users-list.component.html',
     styleUrl: './users-list.component.scss',
-
 })
 
 export class UsersListComponent {
@@ -26,7 +25,7 @@ export class UsersListComponent {
     }
     deleteUser(id: number) {
         this.users = this.users.filter(
-            item => item.id !== id
+            user => user.id !== id
         )
     }
 }
