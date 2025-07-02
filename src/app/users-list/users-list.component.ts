@@ -22,10 +22,13 @@ export class UsersListComponent {
                 this.users = response;
             }
         )
+        
     }
     deleteUser(id: number) {
         this.users = this.users.filter(
-            user => user.id !== id
+            (user: User) => user.id !== id
         )
     }
 }
+
+
