@@ -253,7 +253,7 @@ console.log(taskFive);
 const taskSix = [...users].reverse();
 console.log(taskSix);
 
-const taskSeven = users.length;ta
+const taskSeven = users.length;
 console.log(taskSeven);
 
 const taskEight = users.filter(user => user.website.endsWith(".com"));

@@ -1,0 +1,7 @@
+<p>ТЕКСТ ЗАДАЧИ:</p>
+<p>{{ todo.title }}</p>
+<p>АВТОР ЗАДАЧИ:</p>
+<p>{{ todo.userId }}</p>
+<p>ЗАДАЧА ЗАВЕРШЕНА:</p>
+<p>{{ todo.completed ? 'ДА' : 'НЕТ' }}</p>
+<button (click)="onDeleteTodo(todo.id)">Удалить задачу</button>

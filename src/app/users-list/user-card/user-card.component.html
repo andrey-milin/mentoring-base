@@ -1,0 +1,7 @@
+<p>{{ user.name }}</p>
+<p>{{ user.address.city }}</p>
+<p class="user-list__company-name">{{ user.company.name }}</p>
+<a href="#" type="mail">{{ user.email }}</a>
+<a href="#">{{ user.website }}</a>
+<p>{{ user.phone }}</p>
+<button class="user-list__btn" (click)=onDeleteUser(user.id)>УДАЛИТЬ ЮЗЕРА</button>
