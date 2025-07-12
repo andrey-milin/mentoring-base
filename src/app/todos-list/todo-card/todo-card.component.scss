@@ -1,23 +1,11 @@
-p {
+.todo-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #3C3C3B;
 }
 
-a {
-    display: block;
-    text-decoration: underline;
-    transition: all 0.3s ease;
-    margin-bottom: 16px;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #7fbeec;
-}
-
-button {
+.todo-btn {
     display: block;
     max-width: 135px;
     width: 100%;

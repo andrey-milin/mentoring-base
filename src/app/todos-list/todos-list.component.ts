@@ -4,7 +4,7 @@ import { TododsApiServise } from "../todos-api.service";
 import { Todo } from "./todo.interface";
 import { TodoCardComponent } from "./todo-card/todo-card.component";
 
-@Component ({
+@Component({
     selector: 'app-todos-list',
     standalone: true,
     templateUrl: './todos-list.component.html',
