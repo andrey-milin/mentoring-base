@@ -1,5 +1,5 @@
 <ul class="user-list clear-list container">
-    <li class="user-list__item" *ngFor="let user of users">
+    <li class="user-list__item" *ngFor="let user of usersServise.users$ | async">
         <app-user-card [user]="user" (deleteUser)="deleteUser($event)"></app-user-card>
         </li>
 </ul>

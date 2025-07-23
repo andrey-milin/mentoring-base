@@ -1,12 +1,13 @@
-import { NgFor } from "@angular/common";
+import { AsyncPipe, NgFor } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { User } from "./user.interface";
 import { UsersApiService } from "../users-api.service";
 import { userCardComponent } from "./user-card/user-card.component";
+import { UsersService } from "../users.service";
 
 @Component({
     selector: 'app-users-list',
-    imports: [NgFor, userCardComponent],
+    imports: [NgFor, userCardComponent, AsyncPipe],
     standalone: true,
     templateUrl: './users-list.component.html',
     styleUrl: './users-list.component.scss',
@@ -15,17 +16,16 @@ import { userCardComponent } from "./user-card/user-card.component";
 export class UsersListComponent {
 
     readonly usersApiService = inject(UsersApiService);
-    users: User[] = [];
+    readonly usersServise = inject(UsersService);
 
     constructor() {
         this.usersApiService.getUsers().subscribe(
-            (response: User[]) => this.users = response
+            (response: User[]) => this.usersServise.setUsers(response)
         )
     }
+
     deleteUser(id: number) {
-        this.users = this.users.filter(
-            (user: User) => user.id !== id
-        )
+        this.usersServise.deleteUser(id);
     }
 }
 
