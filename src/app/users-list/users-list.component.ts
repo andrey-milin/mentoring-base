@@ -1,5 +1,5 @@
 import { AsyncPipe, NgFor } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { User } from "./user.interface";
 import { UsersApiService } from "../users-api.service";
 import { userCardComponent } from "./user-card/user-card.component";
@@ -11,6 +11,7 @@ import { UsersService } from "../users.service";
     standalone: true,
     templateUrl: './users-list.component.html',
     styleUrl: './users-list.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class UsersListComponent {

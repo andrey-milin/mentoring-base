@@ -1,5 +1,5 @@
 import { AsyncPipe, NgFor } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { TododsApiServise } from "../todos-api.service";
 import { Todo } from "./todo.interface";
 import { TodoCardComponent } from "./todo-card/todo-card.component";
@@ -10,7 +10,8 @@ import { TodosService } from "../todos.service";
     standalone: true,
     templateUrl: './todos-list.component.html',
     styleUrl: './todos-list.component.scss',
-    imports: [NgFor, TodoCardComponent, AsyncPipe,]
+    imports: [NgFor, TodoCardComponent, AsyncPipe,],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class TodosListComponent {
