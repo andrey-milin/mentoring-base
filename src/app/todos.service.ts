@@ -12,16 +12,10 @@ export class TodosService {
     }
 
     editTodo(editedTodo: Todo) {
-        this.todosSubject$.next(this.todosSubject$.value.map(
-            todo => {
-                if (todo.id === editedTodo.id) {
-                    return editedTodo
-                } else {
-                    return todo
-                }
-            }
-        )
-        )
+        const apdatedTodos = this.todosSubject$.value.map(
+            (todo: Todo) => todo.id === editedTodo.id ? editedTodo : todo
+        );
+        this.todosSubject$.next(apdatedTodos);
     }
 
     createTodo(todo: Todo) {
@@ -29,9 +23,9 @@ export class TodosService {
     }
 
     deleteTodo(id: number) {
-        this.todosSubject$.next(this.todosSubject$.value.filter(
-            todo => todo.id !== id
-        )
-        )
+        const fiterTodos = this.todosSubject$.value.filter(
+            (todo: Todo) => todo.id !== id
+        );
+        this.todosSubject$.next(fiterTodos);
     }
 }

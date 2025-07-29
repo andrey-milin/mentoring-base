@@ -11,17 +11,11 @@ export class UsersService {
         this.usersSubject$.next(newUsers);
     }
 
-    aditUser(aditedUser: User) {
-        this.usersSubject$.next(this.usersSubject$.value.map(
-            user => {
-                if (user.id === aditedUser.id) {
-                    return aditedUser
-                } else {
-                    return user
-                }
-            }
-        )
-        )
+    editUser(editedUser: User) {
+        const apdatedUsers = this.usersSubject$.value.map(
+            (user: User) => user.id === editedUser.id ? editedUser : user
+        );
+        this.usersSubject$.next(apdatedUsers);
     }
 
     createUser(user: User) {
@@ -29,9 +23,9 @@ export class UsersService {
     }
 
     deleteUser(id: number) {
-        this.usersSubject$.next(this.usersSubject$.value.filter(
-            user => user.id !== id
-        )
-        )
+        const filterUser = this.usersSubject$.value.filter(
+            (user: User) => user.id !== id
+        );
+        this.usersSubject$.next(filterUser);
     }
 }
