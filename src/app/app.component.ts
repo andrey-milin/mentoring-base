@@ -1,6 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 const titleAboutCompany = (title: string) => {

@@ -1,0 +1,32 @@
+<form class="form-user" [formGroup] ="form" (ngSubmit)="submintForm()">
+    <p class="form-user__title">NAME:</p>
+    <input class="form-user__input"  type="text" formControlName = "name">
+    <div *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)" class="form-user__alert">
+        <div *ngIf="form.controls['name'].errors">имя введено неправильно</div>
+    </div>
+    <p class="form-user__title">CITY:</p>
+    <input class="form-user__input" type="text" formControlName = "address">
+        <div *ngIf="form.controls['address'].invalid && (form.controls['address'].dirty || form.controls['address'].touched)"
+            class="form-user__alert">
+            <div *ngIf="form.controls['address'].errors">название введено неправильно</div>
+        </div>
+    <p class="form-user__title">COMPANY NAME:</p>
+    <input class="form-user__input" type="text" formControlName = "companyName">
+        <div *ngIf="form.controls['companyName'].invalid && (form.controls['companyName'].dirty || form.controls['companyName'].touched)"
+            class="form-user__alert">
+            <div *ngIf="form.controls['companyName'].errors">название введено неправильно</div>
+        </div>
+    <p class="form-user__title">EMAIL:</p>
+    <input class="form-user__input" type="text" formControlName = "email">
+        <div *ngIf="form.controls['email'].invalid && (form.controls['email'].dirty || form.controls['email'].touched)"
+            class="form-user__alert">
+            <div *ngIf="form.controls['email'].errors">имя почты введено неправильно</div>
+        </div>
+    <p class="form-user__title">PHONE:</p>
+    <input class="form-user__input" type="text" formControlName = "phone">
+        <div *ngIf="form.controls['phone'].invalid && (form.controls['phone'].dirty || form.controls['phone'].touched)"
+            class="form-user__alert">
+            <div *ngIf="form.controls['phone'].errors">номер телефона введен неправильно</div>
+        </div>
+    <button class="form-user__btn" [disabled] = "form.invalid">CREATE USER</button>
+</form>
