@@ -1,50 +1,17 @@
 .form_todo {
-    max-width: 280px;
-    margin-top: 30px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: white;
-    border: 1px solid #3C3C3B;
+  max-width: 350px;
+  margin-top: 30px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  border: 1px solid #3c3c3b;
+}
 
-    &__title {
-        margin: 0px;
-        padding: 0px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: #3C3C3B;
-    }
-
-    &__alert {
-        padding: 0px;
-        margin: 0px;
-        color: red;
-        font-weight: 300;
-        font-size: 11px;
-        line-height: 0px;
-    }
-
-    &__btn {
-        display: block;
-        max-width: 135px;
-        width: 100%;
-        padding: 10px 10px;
-        border: 1px solid #F0BA4E;
-        border-radius: 54px;
-        background-color: inherit;
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 19px;
-        color: #3C3C3B;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &__btn:disabled {
-        background-color: #dfddddca;
-        border: 1px solid #989896;
-    }
+.form_todo__btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
 }
