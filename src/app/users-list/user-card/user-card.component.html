@@ -4,4 +4,6 @@
 <a class="user-link" href="#" type="mail">{{ user.email }}</a>
 <a class="user-link" href="#">{{ user.website }}</a>
 <p class="user_title">{{ user.phone }}</p>
-<button class="user-list__btn" (click)=onDeleteUser(user.id)>УДАЛИТЬ ЮЗЕРА</button>
+<button class="user-list__btn" (click)="onDeleteUser(user.id)">
+  УДАЛИТЬ ЮЗЕРА
+</button>

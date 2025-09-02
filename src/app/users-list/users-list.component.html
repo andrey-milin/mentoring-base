@@ -1,6 +1,9 @@
 <app-create-form-user (createUser)="createUser($event)"></app-create-form-user>
 <ul class="user-list clear-list container">
-    <li class="user-list__item" *ngFor="let user of usersServise.users$ | async">
-        <app-user-card [user]="user" (deleteUser)="deleteUser($event)"></app-user-card>
-        </li>
+  <li class="user-list__item" *ngFor="let user of usersServise.users$ | async">
+    <app-user-card
+      [user]="user"
+      (deleteUser)="deleteUser($event)"
+    ></app-user-card>
+  </li>
 </ul>

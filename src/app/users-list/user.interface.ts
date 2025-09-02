@@ -11,18 +11,18 @@ export interface User {
     geo?: {
       lat: string;
       lng: string;
-    }
-  },
+    };
+  };
   phone: string;
   website?: string;
   company: {
     name: string;
     catchPhrase?: string;
     bs?: string;
-  }
+  };
 }
 
-export interface createUserI {
+export interface ICreateUser {
   id: number;
   name: string;
   address: string;

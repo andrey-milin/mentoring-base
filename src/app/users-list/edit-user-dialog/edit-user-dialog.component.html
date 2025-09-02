@@ -1,0 +1,33 @@
+<form class="form-user" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>name</mat-label>
+    <input type="text" matInput formControlName="name" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>city</mat-label>
+    <input type="text" matInput formControlName="address" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>company name</mat-label>
+    <input type="text" matInput formControlName="companyName" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>email</mat-label>
+    <input type="text" matInput formControlName="email" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>phone</mat-label>
+    <input type="text" matInput formControlName="phone" />
+  </mat-form-field>
+  <button
+    matFab
+    extended
+    class="form-user-btn"
+    (click)="submintForm()"
+    type="submit"
+    [disabled]="form.invalid"
+  >
+    <mat-icon>add</mat-icon>
+    CREATE USER
+  </button>
+</form>
