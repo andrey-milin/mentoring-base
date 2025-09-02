@@ -1,21 +1,50 @@
-<form action="" class="form_todo" [formGroup]="formTodo" (ngSubmit)="submintTodoForm()">
-    <p class="form_todo__title">ТЕКСТ ЗАДАЧИ:</p>
-    <input type="text" class="form_todo__input" formControlName = "title">
-    <div *ngIf="formTodo.controls['title'].invalid && (formTodo.controls['title'].dirty || formTodo.controls['title'].touched)"
-        class="form_todo__alert">
-        <div *ngIf="formTodo.controls['title'].errors">поле заполнено неправильно</div>
+<form
+  action=""
+  class="form_todo"
+  [formGroup]="formTodo"
+  (ngSubmit)="submintTodoForm()"
+>
+  <p class="form_todo__title">ТЕКСТ ЗАДАЧИ:</p>
+  <input type="text" class="form_todo__input" formControlName="title" />
+  <div
+    *ngIf="
+      formTodo.controls['title'].invalid &&
+      (formTodo.controls['title'].dirty || formTodo.controls['title'].touched)
+    "
+    class="form_todo__alert"
+  >
+    <div *ngIf="formTodo.controls['title'].errors">
+      поле заполнено неправильно
     </div>
-    <p class="form_todo__title">АВТОР ЗАДАЧИ</p>
-    <input type="text" class="form_todo__input" formControlName = "userId">
-    <div *ngIf="formTodo.controls['userId'].invalid && (formTodo.controls['userId'].dirty || formTodo.controls['userId'].touched)"
-        class="form_todo__alert">
-        <div *ngIf="formTodo.controls['userId'].errors">поле заполнено неправильно</div>
+  </div>
+  <p class="form_todo__title">АВТОР ЗАДАЧИ</p>
+  <input type="text" class="form_todo__input" formControlName="userId" />
+  <div
+    *ngIf="
+      formTodo.controls['userId'].invalid &&
+      (formTodo.controls['userId'].dirty || formTodo.controls['userId'].touched)
+    "
+    class="form_todo__alert"
+  >
+    <div *ngIf="formTodo.controls['userId'].errors">
+      поле заполнено неправильно
     </div>
-    <p class="form_todo__title">ЗАДАЧА ЗАВЕРШЕНА:</p>
-    <input type="text" class="form_todo__input" formControlName = "completed">
-    <div *ngIf="formTodo.controls['completed'].invalid && (formTodo.controls['completed'].dirty || formTodo.controls['completed'].touched)"
-        class="form_todo__alert">
-        <div *ngIf="formTodo.controls['completed'].errors">поле заполнено неправильно</div>
+  </div>
+  <p class="form_todo__title">ЗАДАЧА ЗАВЕРШЕНА:</p>
+  <input type="text" class="form_todo__input" formControlName="completed" />
+  <div
+    *ngIf="
+      formTodo.controls['completed'].invalid &&
+      (formTodo.controls['completed'].dirty ||
+        formTodo.controls['completed'].touched)
+    "
+    class="form_todo__alert"
+  >
+    <div *ngIf="formTodo.controls['completed'].errors">
+      поле заполнено неправильно
     </div>
-    <button class="form_todo__btn" [disabled] = "formTodo.invalid">ДОБАВИТЬ ЗАДАЧУ</button>
+  </div>
+  <button class="form_todo__btn" [disabled]="formTodo.invalid">
+    ДОБАВИТЬ ЗАДАЧУ
+  </button>
 </form>

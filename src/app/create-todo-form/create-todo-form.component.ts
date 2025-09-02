@@ -13,7 +13,7 @@ import {
 
 export function completedValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
-    const value = control.value?.trim().toLowerCase();
+    const value: string = control.value?.trim().toLowerCase();
     if (value === 'да' || value === 'нет') {
       return null;
     }
@@ -44,7 +44,10 @@ export class CreateTodoFormComponent {
   });
 
   private getCompletedValue(): boolean {
-    const value = this.formTodo.get('completed')?.value!.trim().toLowerCase();
+    const value: string | undefined = this.formTodo
+      .get('completed')
+      ?.value!.trim()
+      .toLowerCase();
     return value === 'да' ? true : false;
   }
 
