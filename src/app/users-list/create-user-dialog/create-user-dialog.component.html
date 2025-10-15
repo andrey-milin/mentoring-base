@@ -1,0 +1,41 @@
+<form class="form-user" [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>name</mat-label>
+    <input type="text" matInput placeholder="name" formControlName="name" />
+  </mat-form-field>
+  <mat-form-field appearance="outline" formGroupName="address">
+    <mat-label>city</mat-label>
+    <input type="text" matInput placeholder="city" formControlName="city" />
+  </mat-form-field>
+  <mat-form-field appearance="outline" formGroupName="company">
+    <mat-label>company name</mat-label>
+    <input type="text" matInput placeholder="company" formControlName="name" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input type="text" matInput placeholder="email" formControlName="email" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>website</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="website"
+      formControlName="website"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>phone</mat-label>
+    <input type="text" matInput formControlName="phone" />
+    <mat-icon matSuffix>phone</mat-icon>
+    <mat-hint>введите номер</mat-hint>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    [mat-dialog-close]="form.value"
+    [disabled]="form.invalid"
+  >
+    <mat-icon>add</mat-icon>
+    CREATE USER
+  </button>
+</form>

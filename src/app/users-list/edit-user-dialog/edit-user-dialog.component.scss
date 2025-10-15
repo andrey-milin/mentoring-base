@@ -1,0 +1,21 @@
+.form-user {
+  max-width: 350px;
+  margin-top: 30px;
+  font-size: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0px 10px;
+  padding-bottom: 10px;
+}
+.form-user-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+}
+.form-user__input {
+    font-size: 80%;
+    margin: 0px;
+}

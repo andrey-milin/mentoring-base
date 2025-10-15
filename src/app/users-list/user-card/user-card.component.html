@@ -1,9 +1,23 @@
-<p class="user-title">{{ user.name }}</p>
-<p class="user-title">{{ user.address.city }}</p>
-<p class="user-list__company-name">{{ user.company.name }}</p>
-<a class="user-link" href="#" type="mail">{{ user.email }}</a>
-<a class="user-link" href="#">{{ user.website }}</a>
-<p class="user_title">{{ user.phone }}</p>
-<button class="user-list__btn" (click)="onDeleteUser(user.id)">
-  УДАЛИТЬ ЮЗЕРА
-</button>
+<mat-card style="width: 400px">
+  <mat-card-header>
+    <mat-card-title>
+      <p>{{ user.name }}</p>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ user.address.city }}</p>
+    <p>{{ user.company.name }}</p>
+    <p>{{ user.email }}</p>
+    <p>{{ user.website }}</p>
+    <p> {{ user.phone }}</p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button mat-stroked-button (click)="openDialogEditUser()">
+      Редактировать<br />пользователя
+    </button>
+    <button mat-fab extended (click)="openDialogDeleteUser()">
+      Удалить<br />пользователя
+    </button>
+  </mat-card-actions>
+</mat-card>

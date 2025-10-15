@@ -1,42 +1,6 @@
-.user-title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: #3c3c3b;
+mat-card-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
-.user-list__company-name {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 34px;
-  color: #3c3c3b;
-}
-
-.user-link {
-  display: block;
-  text-decoration: underline;
-  transition: all 0.3s ease;
-  margin-bottom: 16px;
-}
-
-.user-link:hover {
-  text-decoration: underline;
-  color: #7fbeec;
-}
-
-.user-list__btn {
-  display: block;
-  max-width: 135px;
-  width: 100%;
-  padding: 10px 10px;
-  border: 1px solid #f0ba4e;
-  border-radius: 54px;
-  background-color: inherit;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 19px;
-  color: #3c3c3b;
-  margin-left: auto;
-  margin-right: auto;
-}

@@ -1,4 +1,8 @@
-<app-create-todo-form (createTodo)="createTodo($event)"></app-create-todo-form>
+<div class="container">
+<button mat-raised-button (click)="openCreateTodoDialog()" class="todo-btn">
+  <mat-icon>add</mat-icon>
+  Добавить задачу
+</button>
 <ul class="todos-list">
   <li
     class="todos-list__item clear-list"
@@ -10,3 +14,4 @@
     ></app-todo-card>
   </li>
 </ul>
+</div>

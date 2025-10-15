@@ -1,9 +1,17 @@
-<div class="todo-title">
-  <p>ТЕКСТ ЗАДАЧИ:</p>
-  <p>{{ todo.title }}</p>
-  <p>АВТОР ЗАДАЧИ:</p>
-  <p>{{ todo.userId }}</p>
-  <p>ЗАДАЧА ЗАВЕРШЕНА:</p>
-  <p>{{ todo.completed ? "ДА" : "НЕТ" }}</p>
-</div>
-<button class="todo-btn" (click)="onDeleteTodo(todo.id)">Удалить задачу</button>
+<mat-card>
+  <mat-card-content>
+    <div class="todo-title">
+      <p>ТЕКСТ ЗАДАЧИ:</p>
+      <p>{{ todo.title }}</p>
+      <p>АВТОР ЗАДАЧИ:</p>
+      <p>{{ todo.userId }}</p>
+      <p>ЗАДАЧА ЗАВЕРШЕНА:</p>
+      <p>{{ todo.completed ? "ДА" : "НЕТ" }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-fab extended class="todo-btn" (click)="openDeleteDialog()">
+      Удалить задачу
+    </button>
+  </mat-card-actions>
+</mat-card>

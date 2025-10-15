@@ -1,0 +1,11 @@
+<mat-card>
+<mat-card-content>
+  <p>
+    Вы действительно хотите удалить пользователя {{ this.data.user.name }} ?
+  </p>
+</mat-card-content>
+  <mat-card-actions>
+    <button mat-button [mat-dialog-close]="userId">да</button>
+    <button mat-button mat-dialog-close>нет</button>
+  </mat-card-actions>
+</mat-card>

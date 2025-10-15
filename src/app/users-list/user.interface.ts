@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
   id: number;
   name: string;
   username?: string;
@@ -14,7 +14,7 @@ export interface User {
     };
   };
   phone: string;
-  website?: string;
+  website: string;
   company: {
     name: string;
     catchPhrase?: string;
@@ -22,11 +22,16 @@ export interface User {
   };
 }
 
-export interface ICreateUser {
+export interface ICreateEditUser {
   id: number;
   name: string;
-  address: string;
-  companyName: string;
+  address: {
+    city: string;
+  };
+  company: {
+    name: string;
+  };
   email: string;
+  website: string;
   phone: string;
 }

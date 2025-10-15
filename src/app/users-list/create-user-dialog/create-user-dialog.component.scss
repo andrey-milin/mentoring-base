@@ -1,0 +1,16 @@
+.form-user {
+  max-width: 350px;
+  margin-top: 30px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+}
+.form-user-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+}
