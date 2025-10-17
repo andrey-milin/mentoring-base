@@ -46,7 +46,6 @@ export class userCardComponent {
           duration: 3000,
         });
       }
-      console.log('модалка закрылась:', editResult);
     });
   }
 

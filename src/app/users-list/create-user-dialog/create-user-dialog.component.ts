@@ -1,4 +1,4 @@
-import { Component, inject, } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -33,26 +33,13 @@ export class CreateUserFormComponent {
   public form = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     address: new FormGroup({
-      city: new FormControl('', [
-        Validators.required,
-        Validators.minLength(2),
-      ]),
+      city: new FormControl('', [Validators.required, Validators.minLength(2)]),
     }),
     company: new FormGroup({
-      name: new FormControl('', [
-        Validators.required,
-        Validators.minLength(2),
-      ]),
+      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     }),
     email: new FormControl('', [Validators.required, Validators.email]),
-    website: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-    ]),
-    phone: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\d+$/),
-      Validators.minLength(7),
-    ]),
+    website: new FormControl('', [Validators.required, Validators.minLength(3),]),
+    phone: new FormControl('', [Validators.required, Validators.pattern(/^\d+$/), Validators.minLength(7)]),
   });
 }

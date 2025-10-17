@@ -1,17 +1,17 @@
 <div class="container">
-<button mat-raised-button (click)="openCreateTodoDialog()" class="todo-btn">
-  <mat-icon>add</mat-icon>
-  Добавить задачу
-</button>
-<ul class="todos-list">
-  <li
-    class="todos-list__item clear-list"
-    *ngFor="let todo of todosServise.todos$ | async"
-  >
-    <app-todo-card
-      [todo]="todo"
-      (deleteTodo)="deleteTodo($event)"
-    ></app-todo-card>
-  </li>
-</ul>
+  <button mat-raised-button (click)="openCreateTodoDialog()" class="todo-btn">
+    <mat-icon>add</mat-icon>
+    Добавить задачу
+  </button>
+  <ul class="todos-list">
+    <li
+      class="todos-list__item clear-list"
+      *ngFor="let todo of todosServise.todos$ | async"
+    >
+      <app-todo-card
+        [todo]="todo"
+        (deleteTodo)="deleteTodo($event)"
+      ></app-todo-card>
+    </li>
+  </ul>
 </div>

@@ -6,11 +6,15 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import {
+  MatFormField,
+  MatFormFieldModule,
+  MatLabel,
+} from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
 import { Todo } from '../todo.interface';
 import { MatInputModule } from '@angular/material/input';
-import { MatCardActions } from "@angular/material/card";
+import { MatCardActions } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -36,11 +40,7 @@ export class CreateTodoDialogComponent {
   public formTodoDialog = new FormGroup({
     title: new FormControl('', [Validators.required, Validators.minLength(2)]),
     userId: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    completed: new FormControl('', [
-      Validators.required,
-      Validators.minLength(2),
-      Validators.maxLength(3),
-    ]),
+    completed: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(3),]),
   });
 
   private getCompletedValue(): boolean {
@@ -58,7 +58,7 @@ export class CreateTodoDialogComponent {
       id: this.data?.todo?.id || new Date().getTime(),
       title: formValue.title || '',
       completed: this.getCompletedValue(),
-      userId: Number(formValue.userId) || 0,
+      userId: Number(formValue.userId),
     };
   }
 }

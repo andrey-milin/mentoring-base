@@ -2,7 +2,12 @@ import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { Todo } from '../todo.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteTodoDialogComponent } from '../delete-todo-dialog/delete-todo-dialog.component';
-import { MatCard, MatCardContent, MatCardActions, MatCardModule } from "@angular/material/card";
+import {
+  MatCard,
+  MatCardContent,
+  MatCardActions,
+  MatCardModule,
+} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -11,7 +16,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   standalone: true,
   templateUrl: './todo-card.component.html',
   styleUrl: './todo-card.component.scss',
-  imports: [MatCard, MatCardContent, MatCardActions, MatButtonModule, MatCardModule],
+  imports: [
+    MatCard,
+    MatCardContent,
+    MatCardActions,
+    MatButtonModule,
+    MatCardModule,
+  ],
 })
 export class TodoCardComponent {
   @Input()
@@ -21,7 +32,7 @@ export class TodoCardComponent {
   deleteTodo = new EventEmitter<number>();
 
   readonly dialog = inject(MatDialog);
-  private snackBar = inject(MatSnackBar)
+  private snackBar = inject(MatSnackBar);
 
   public openDeleteDialog() {
     const dialogRef = this.dialog.open(DeleteTodoDialogComponent, {

@@ -15,14 +15,14 @@ export class TodosService {
 
   editTodo(editedTodo: Todo) {
     const updatedTodos = this.todosSubject$.value.map((todo: Todo) =>
-      todo.id === editedTodo.id ? editedTodo : todo
+      todo.id === editedTodo.id ? editedTodo : todo,
     );
     this.todosSubject$.next(updatedTodos);
   }
 
   createTodo(todo: Todo) {
     const existingTodo: Todo | undefined = this.todosSubject$.value.find(
-      (currentItem: Todo) => currentItem.userId === todo.userId
+      (currentItem: Todo) => currentItem.userId === todo.userId,
     );
     if (existingTodo) {
       this.snackBar.open('ТАКАЯ ЗАДАЧА УЖЕ СУЩЕСТВУЕТ', 'ок', {
@@ -38,7 +38,7 @@ export class TodosService {
 
   deleteTodo(id: number) {
     const fiterTodos = this.todosSubject$.value.filter(
-      (todo: Todo) => todo.id !== id
+      (todo: Todo) => todo.id !== id,
     );
     this.todosSubject$.next(fiterTodos);
   }

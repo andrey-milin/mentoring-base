@@ -17,14 +17,14 @@ export class UsersService {
 
   editUser(editedUser: IUser) {
     const apdatedUsers = this.usersSubject$.value.map((user: IUser) =>
-      user.id === editedUser.id ? editedUser : user
+      user.id === editedUser.id ? editedUser : user,
     );
     this.usersSubject$.next(apdatedUsers);
   }
 
   createUser(user: IUser) {
     const existingUser: IUser | undefined = this.usersSubject$.value.find(
-      (currentElement: IUser) => currentElement.email === user.email
+      (currentElement: IUser) => currentElement.email === user.email,
     );
 
     if (existingUser) {
@@ -38,7 +38,7 @@ export class UsersService {
 
   deleteUser(id: number) {
     const filterUser = this.usersSubject$.value.filter(
-      (user: IUser) => user.id !== id
+      (user: IUser) => user.id !== id,
     );
     this.usersSubject$.next(filterUser);
   }

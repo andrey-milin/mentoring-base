@@ -37,10 +37,7 @@ export class EditUserDialogComponent implements OnInit {
     company: new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     }),
-    email: new FormControl('', [
-      Validators.required,
-      Validators.email,
-    ]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     website: new FormControl('', [
       Validators.required,
       Validators.minLength(2),

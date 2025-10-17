@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 const titleAboutCompany = (title: string) => {
   return title;
@@ -24,7 +24,7 @@ console.log(upperCaseMenuItems);
 @Component({
   selector: 'app-header-component',
   standalone: true,
-  imports: [RouterLink,NgIf, NgFor],
+  imports: [RouterLink, NgIf, NgFor],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -39,7 +39,7 @@ export class HeaderComponent {
 
   changeMenuText() {
     this.menuItems = upperCaseMenuItems.map((item) =>
-      this.isUpperCase ? item.toLowerCase() : item.toUpperCase()
+      this.isUpperCase ? item.toLowerCase() : item.toUpperCase(),
     );
     this.isUpperCase = !this.isUpperCase;
   }
