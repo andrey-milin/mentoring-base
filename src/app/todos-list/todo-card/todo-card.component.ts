@@ -10,6 +10,7 @@ import {
 } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { LimitTitlePipe } from "../../pipes/limit-title.pipe";
 
 @Component({
   selector: 'app-todo-card',
@@ -22,7 +23,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     MatCardActions,
     MatButtonModule,
     MatCardModule,
-  ],
+    LimitTitlePipe
+],
 })
 export class TodoCardComponent {
   @Input()

@@ -2,7 +2,7 @@
   <mat-card-content>
     <div class="todo-title">
       <p>ТЕКСТ ЗАДАЧИ:</p>
-      <p>{{ todo.title }}</p>
+      <p>{{ todo.title | LimitTitlePipe}}</p>
       <p>АВТОР ЗАДАЧИ:</p>
       <p>{{ todo.userId }}</p>
       <p>ЗАДАЧА ЗАВЕРШЕНА:</p>

@@ -7,13 +7,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DeleteHypnenPipe } from "../../pipes/delete-hypnen.pipe";
 
 @Component({
   selector: 'app-user-card',
   standalone: true,
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.scss',
-  imports: [MatDialogModule, MatCardModule, MatButtonModule, MatDividerModule],
+  imports: [MatDialogModule, MatCardModule, MatButtonModule, MatDividerModule, DeleteHypnenPipe],
 })
 export class userCardComponent {
   @Input()
