@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   standalone: true,
 })
 export class LimitTitlePipe implements PipeTransform {
-  transform(title: string){
-      return title.length <= 20 ? title : title.slice(0,20) + '...';
+  transform(title: string) {
+      return title.length <= 20 ? title : title.slice(0,17) + '...';
     }
   }

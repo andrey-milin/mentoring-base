@@ -36,7 +36,7 @@ export class HeaderComponent {
   readonly isShowCatalog = true;
   menuItems = upperCaseMenuItems;
   isUpperCase = true;
-  readonly currentDate = new Date();
+  readonly currentDate: Date = new Date();
 
   changeMenuText() {
     this.menuItems = upperCaseMenuItems.map((item) =>
