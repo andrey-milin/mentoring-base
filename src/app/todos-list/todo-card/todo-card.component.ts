@@ -11,6 +11,7 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LimitTitlePipe } from "../../pipes/limit-title.pipe";
+import { ShadowDirective } from "../../directives/shadow.directive";
 
 @Component({
   selector: 'app-todo-card',
@@ -23,7 +24,8 @@ import { LimitTitlePipe } from "../../pipes/limit-title.pipe";
     MatCardActions,
     MatButtonModule,
     MatCardModule,
-    LimitTitlePipe
+    LimitTitlePipe,
+    ShadowDirective
 ],
 })
 export class TodoCardComponent {

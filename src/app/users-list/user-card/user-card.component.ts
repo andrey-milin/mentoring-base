@@ -8,13 +8,22 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { RemoveHyphenPipe } from '../../pipes/remove-hyphen.pipe';
+import { ShadowDirective } from '../../directives/shadow.directive';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-user-card',
   standalone: true,
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.scss',
-  imports: [MatDialogModule, MatCardModule, MatButtonModule, MatDividerModule, RemoveHyphenPipe, ],
+  imports: [
+    MatDialogModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule,
+    RemoveHyphenPipe,
+    ShadowDirective,
+    MatTooltipModule,],
 })
 export class userCardComponent {
   @Input()

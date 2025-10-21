@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class RemoveHyphenPipe implements PipeTransform {
   transform(phone: string): string {
-   return phone.replace(/-/g, "");
+    return phone.replace(/-/g, "");
   }
 
 }

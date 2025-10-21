@@ -1,6 +1,8 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { TextTransformDirective } from "./directives/textTransform.directive";
+import { YellowDirective } from './directives/yellow.directive';
 
 const titleAboutCompany = (title: string) => {
   return title;
@@ -24,7 +26,7 @@ console.log(upperCaseMenuItems);
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, NgIf, NgFor],
+  imports: [RouterLink, RouterOutlet, NgIf, NgFor, TextTransformDirective, YellowDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

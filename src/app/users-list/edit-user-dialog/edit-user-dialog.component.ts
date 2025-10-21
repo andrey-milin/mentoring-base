@@ -9,7 +9,8 @@ import { MatFormField } from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
 import { MAT_DIALOG_DATA, MatDialogClose } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import { ICreateEditUser, IUser } from '../user.interface';
+import { IUser } from '../user.interface';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-edit-user-dialog',
@@ -23,6 +24,7 @@ import { ICreateEditUser, IUser } from '../user.interface';
     MatDialogClose,
     MatInputModule,
     ReactiveFormsModule,
+    MatTooltipModule,
   ],
 })
 export class EditUserDialogComponent implements OnInit {
@@ -38,15 +40,8 @@ export class EditUserDialogComponent implements OnInit {
       name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     }),
     email: new FormControl('', [Validators.required, Validators.email]),
-    website: new FormControl('', [
-      Validators.required,
-      Validators.minLength(2),
-    ]),
-    phone: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^\d+$/),
-      Validators.minLength(7),
-    ]),
+    website: new FormControl('', [Validators.required, Validators.minLength(2),]),
+    phone: new FormControl('', [Validators.required, Validators.pattern(/^\d+$/), Validators.minLength(7),]),
   });
 
   ngOnInit(): void {

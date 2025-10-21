@@ -1,4 +1,4 @@
-<mat-card style="width: 400px">
+<mat-card shadow style="width: 320px">
   <mat-card-header>
     <mat-card-title>
       <p>{{ user.name }}</p>
@@ -13,8 +13,8 @@
   </mat-card-content>
   <mat-divider></mat-divider>
   <mat-card-actions>
-    <button class="card-btn" mat-stroked-button (click)="openDialogEditUser()">
-      Редактировать пользователя
+    <button class="card-btn card-btn-edit" mat-stroked-button matTooltip="Редактировать данные пользователя" (click)="openDialogEditUser()">
+      Редактировать
     </button>
     <button class="card-btn" mat-fab extended (click)="openDialogDeleteUser()">
       Удалить пользователя
