@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostBinding, HostListener, inject } from "@angular/core";
 
 @Directive({
-  selector: '[textTF]',
+  selector: '[textTransform]',
   standalone: true,
 })
 export class TextTransformDirective {

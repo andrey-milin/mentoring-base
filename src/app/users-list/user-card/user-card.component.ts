@@ -23,7 +23,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatDividerModule,
     RemoveHyphenPipe,
     ShadowDirective,
-    MatTooltipModule,],
+    MatTooltipModule,
+  ],
 })
 export class userCardComponent {
   @Input()

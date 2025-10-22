@@ -26,7 +26,7 @@ import { ShadowDirective } from "../../directives/shadow.directive";
     MatCardModule,
     LimitTitlePipe,
     ShadowDirective
-],
+  ],
 })
 export class TodoCardComponent {
   @Input()
