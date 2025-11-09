@@ -4,6 +4,8 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { TodosListComponent } from './todos-list/todos-list.component';
+import { AdminComponent } from './admin/admin.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
   {
@@ -21,5 +23,9 @@ export const routes: Routes = [
   {
     path: 'todos',
     component: TodosListComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminComponent, canActivate: [authGuard]
   },
 ];

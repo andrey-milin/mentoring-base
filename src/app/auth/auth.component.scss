@@ -1,0 +1,21 @@
+
+.conteiner{
+  width: 100%;
+  padding: 10px;
+}
+.title{
+  display: block;
+  color: #3c3c3b;
+}
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+}
+
+.btn {
+  width: 200px;
+}

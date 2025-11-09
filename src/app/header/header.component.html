@@ -18,10 +18,16 @@
           <a href="#">Каталог</a>
         </li>
         <li class="main-nav__item">
-          <button class="btn" (click)="changeMenuText()">text/up/low</button>
+          <button textTransform class="btn" routerLink="/todos/">Задачи</button>
         </li>
         <li class="main-nav__item">
-          <button class="btn" routerLink="/user">Пользователи</button>
+          <button textTransform class="btn" routerLink="/user">Пользователи</button>
+        </li>
+        <li class="main-nav__item">
+          <button textTransform class="btn" routerLink="/admin">Админка</button>
+        </li>
+        <li class="header-sub__item-date">
+          {{ currentDate | date:'medium' }}
         </li>
       </ul>
       <ul class="main-nav__content nav-content clear-list">
@@ -35,7 +41,7 @@
           <img src="/assets/heart.svg" alt="сердечко" />
         </li>
         <li class="nav-content__item">
-          <button class="nav-content__cart" aria-label="карзина">
+          <button yellow class="nav-content__cart" aria-label="карзина">
             <img src="/assets/cart.svg" alt="карзина" />
             <span>Пусто</span>
           </button>
@@ -51,39 +57,30 @@
       </button>
       <ul class="header-sub__list clear-list">
         <li class="header-sub__item">
-          <a
-            href="#"
-            class="header-sub__item-link ngfor-link"
-            *ngFor="let item of menuItems"
-            >{{ item }}</a
-          >
+          <a href="#" class="header-sub__item-link ngfor-link" *ngFor="let item of menuItems">{{ item }}</a>
         </li>
-        <li class="header-sub__item-date">
-          {{ currentDate | date:'medium' }}
+        <li class="header-sub__item">
+          <button textTransform class="btn" (click)="changeMenuText()">text/up/low</button>
         </li>
       </ul>
       <div class="header-sub__utils">
         <div class="header-sub__input-box">
-          <input
-            type="search"
-            name="search"
-            placeholder="Поиск, например Круг зачистной "
-            class="header-sub__search-input"
-          />
+          <input type="search" name="search" placeholder="Поиск, например Круг зачистной "
+            class="header-sub__search-input" />
           <button class="header-sub__search-btn" aria-label="Найти">
             <img src="/assets/icon-search.svg" alt="лупа" />
           </button>
         </div>
         <div class="header-sub__location">
-          <img
-            src="/assets/map-pin.svg"
-            alt="значок локации"
-            class="header-sub__location-img"
-          />
+          <img src="/assets/map-pin.svg" alt="значок локации" class="header-sub__location-img" />
           <Select class="header-sub__сities">
             <option value="moscow">Москва</option>
             <option value="omsk">Омск</option>
           </Select>
+          <div class="header-sub_admin">
+            <button class="header-sub_admin-btn" (click)="openDialog()" *ngIf="(userServise.user$ | async) === null">войти</button>
+            <button class="header-sub_admin-btn" (click)="logout()" *ngIf="(userServise.user$ | async) !== null" routerLink="/">выйти</button>
+          </div>
         </div>
       </div>
     </div>
