@@ -59,16 +59,16 @@ export class HeaderComponent {
     });
 
     dialogRef.afterClosed().subscribe((result: string) => {
-      if(result === 'admin'){
+      if (result === 'admin') {
         this.userServise.loginAsAdmin();
-      } else if(result === 'user'){
+      } else if (result === 'user') {
         this.userServise.loginAsUser();
       } else return undefined;
     });
   }
 
   public logout() {
-    if(confirm('вы точно хотите выйти?')){
+    if (confirm('вы точно хотите выйти?')) {
       return this.userServise.logout();
     }
     else return false; 

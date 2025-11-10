@@ -4,8 +4,8 @@ import { BehaviorSubject } from 'rxjs';
 export interface IUser {
   name: string,
   email: string,
-  isAdmin: boolean | null,
-} 
+  isAdmin: boolean,
+}
 
 @Injectable({
   providedIn: 'root'
@@ -14,21 +14,21 @@ export class UserService {
   private readonly userSubject$ = new BehaviorSubject<IUser | null>(null);
   public readonly user$ = this.userSubject$.asObservable();
 
-  private user: IUser  = {
+  private user: IUser = {
     name: 'Andrey',
     email: 'andrey.milin.nur@gail.com',
-    isAdmin: null,
+    isAdmin: false,
   }
 
- loginAsAdmin() {
-    this.userSubject$.next({...this.user, isAdmin: true});
+  loginAsAdmin() {
+    this.userSubject$.next({ ...this.user, isAdmin: true });
   }
   loginAsUser() {
-    this.userSubject$.next({...this.user, isAdmin: false});
+    this.userSubject$.next({ ...this.user, isAdmin: false });
   }
 
   get isAdmin() {
-    return this.userSubject$.value?.isAdmin;
+    return this.userSubject$.value?.isAdmin
   }
 
   logout() {
